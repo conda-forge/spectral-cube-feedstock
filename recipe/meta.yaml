@@ -1,7 +1,7 @@
 {% set name = "spectral-cube" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.3" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "a08e60b314c0f6e44a3207725f962e4b9d4c9196232344f83828ca376d4c7877" %}
+{% set hash_value = "6b500d51459360b61b859feb7ba2d17924abf5337740281e279e95477f1def14" %}
 
 package:
   name: '{{ name|lower }}'
