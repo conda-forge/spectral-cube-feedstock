@@ -12,12 +12,20 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   '{{ hash_type }}': '{{ hash_value }}'
 
+  # The following patch is needed because pip doesn't allow flags to be passed to the egg_info
+  # step, and we need to pass --offline and --no-git. This can be updated once the following
+  # issue is fixed: https://github.com/pypa/pip/issues/4383
+  patches:
+    - setup.cfg.patch
+
 build:
-  number: 0
-  script: python setup.py install --offline --single-version-externally-managed --record=record.txt
+  noarch: python
+  number: 1
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
-  build:
+  host:
+    - pip
     - python
     - setuptools
   run:
