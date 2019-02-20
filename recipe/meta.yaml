@@ -1,7 +1,7 @@
 {% set name = "spectral-cube" %}
-{% set version = "0.4.3" %}
+{% set version = "0.4.4" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "6b500d51459360b61b859feb7ba2d17924abf5337740281e279e95477f1def14" %}
+{% set hash_value = "9051ede204b1e25b6358b5e0e573b624ec0e208c24eb03a7ed4925b745c93b5e" %}
 
 package:
   name: '{{ name|lower }}'
@@ -20,7 +20,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
