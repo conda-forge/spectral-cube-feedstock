@@ -5,7 +5,7 @@ Home: http://spectral-cube.readthedocs.io
 
 Package license: BSD 3-clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A package for interaction with spectral cubes
 
