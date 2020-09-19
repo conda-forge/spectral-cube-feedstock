@@ -10,12 +10,6 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 71c62c336a8f9b216cfee5fae2ab86a032df323d41f684ec44cb796d44d6f19f
 
-  # The following patch is needed because pip doesn't allow flags to be passed to the egg_info
-  # step, and we need to pass --offline and --no-git. This can be updated once the following
-  # issue is fixed: https://github.com/pypa/pip/issues/4383
-  patches:
-    - setup.cfg.patch
-
 build:
   noarch: python
   number: 0
