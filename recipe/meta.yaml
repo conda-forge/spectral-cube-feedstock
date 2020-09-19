@@ -24,9 +24,11 @@ requirements:
     - python
     - setuptools
     - six
-    - astropy
     - numpy >=1.8.0
+    - astropy
     - radio-beam >=0.2
+    - dask
+    - joblib
 
 test:
   imports:
