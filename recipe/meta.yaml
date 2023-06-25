@@ -18,10 +18,10 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.7
     - setuptools_scm
   run:
-    - python
+    - python >=3.7
     - setuptools
     - six
     - numpy >=1.8.0
