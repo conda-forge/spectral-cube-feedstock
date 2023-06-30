@@ -29,6 +29,7 @@ requirements:
     - radio-beam >=0.3.3
     - dask
     - joblib
+    - casa_formats_io
 
 test:
   imports:
