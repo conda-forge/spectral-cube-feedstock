@@ -1,5 +1,5 @@
 {% set name = "spectral-cube" %}
-{% set version = "0.5.0" %}
+{% set version = "0.6.2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 71c62c336a8f9b216cfee5fae2ab86a032df323d41f684ec44cb796d44d6f19f
+  sha256: d05afd3ef512862d38cfc494b1913bcc7b97656838af1b7a8304816fa96bd8f7
 
 build:
   noarch: python
@@ -18,17 +18,18 @@ build:
 requirements:
   host:
     - pip
-    - python
-    - setuptools
+    - python >=3.9
+    - setuptools_scm
   run:
-    - python
+    - python >=3.9
     - setuptools
     - six
     - numpy >=1.8.0
     - astropy
-    - radio-beam >=0.2
+    - radio-beam >=0.3.3
     - dask
     - joblib
+    - casa_formats_io
 
 test:
   imports:
@@ -36,7 +37,7 @@ test:
 
 about:
   home: http://spectral-cube.readthedocs.io
-  license: BSD 3-clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.rst
   summary: A package for interaction with spectral cubes
