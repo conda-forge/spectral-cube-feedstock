@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/spectral-cube-f
 
 Home: http://spectral-cube.readthedocs.io
 
-Package license: BSD 3-clause
+Package license: BSD-3-Clause
 
 Summary: A package for interaction with spectral cubes
 
@@ -158,7 +158,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@astrofrog-conda-forge](https://github.com/astrofrog-conda-forge/)
+* [@astrofrog](https://github.com/astrofrog/)
 * [@bsipocz](https://github.com/bsipocz/)
 * [@keflavich](https://github.com/keflavich/)
 * [@mwcraig](https://github.com/mwcraig/)
