@@ -1,5 +1,5 @@
 {% set name = "spectral-cube" %}
-{% set version = "0.6.3" %}
+{% set version = "0.6.5" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ef07efb2b6af4a4006913b6e3c4d35c0f5bbc041ca5564fc918427f774360783
+  sha256: 809cebaf7fbf16c40dfc71c3111c5ffcd10202bc0e693a85c2623f43667d1d33
 
 build:
   noarch: python
