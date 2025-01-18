@@ -20,16 +20,17 @@ requirements:
     - pip
     - python {{ python_min }}
     - setuptools_scm
+    - packaging
   run:
     - python >={{ python_min }}
     - setuptools
-    - six
     - numpy >=1.8.0
     - astropy-base
     - radio-beam >=0.3.3
     - dask
     - joblib
     - casa_formats_io
+    - tdqm
 
 test:
   requires:
