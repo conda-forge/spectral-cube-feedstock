@@ -1,5 +1,5 @@
 {% set name = "spectral-cube" %}
-{% set version = "0.6.5" %}
+{% set version = "0.6.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 809cebaf7fbf16c40dfc71c3111c5ffcd10202bc0e693a85c2623f43667d1d33
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 6e306086be56adf0b8347e5cca2cbd4548829894941c1b720fad5b7758bfe243
 
 build:
   noarch: python
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -20,16 +20,17 @@ requirements:
     - pip
     - python {{ python_min }}
     - setuptools_scm
+    - packaging
   run:
     - python >={{ python_min }}
     - setuptools
-    - six
     - numpy >=1.8.0
     - astropy-base
     - radio-beam >=0.3.3
     - dask
     - joblib
     - casa_formats_io
+    - tqdm
 
 test:
   requires:
