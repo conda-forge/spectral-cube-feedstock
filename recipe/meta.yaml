@@ -30,7 +30,7 @@ requirements:
     - dask
     - joblib
     - casa_formats_io
-    - tdqm
+    - tqdm
 
 test:
   requires:
